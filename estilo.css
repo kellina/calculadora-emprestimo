@@ -1,15 +1,19 @@
 body {
-  color: brown;
+  color: #696d7d ;
 }
 
 div.conteiner {
   display: flex;
   justify-content:space-between;
   border: 1px solid black;
+  background-color: #c8d5b9;
+}
+
+div.formulario {
+  display: flex;
 }
 
 div.formulario form {
-  background-color: aqua;
   display: flex;
   flex-direction: column;
 }
@@ -24,7 +28,7 @@ div.titulo-form {
 }
 
 .result {
-  background-color: rgb(240, 181, 210);
+  width: 300px;
 }
 
 .titulo-pagamento {
