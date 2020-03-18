@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="estilo.css" >
+    <script src="calculoEmprestimo.js"></script>
+
+    <title>
+      Calculadora de emprestimos
+    </title>
+  </head>
+  <body>
+    <div class="conteiner">
+      <div class="formulario">
+        <form name="dados">
+          <div class="titulo-form"> Informe os dados do emprestimo:</div>
+          <label for="emprestimo">Total do emprestimo:</label>
+          <input type="number" id="emprestimo" name="emprestimo">
+          <label for="juros"> Juros Anuais (%):</label>
+          <input type="number" id="juros" name="juros">
+          <label for="periodo"> Periodo (anos):</label>
+          <input type="number" id="periodo" name="periodo">
+          <button onclick="calcular()" type="button">Calcular</button>
+        </form>
+        <div class="result"> 
+          <div class="titulo-pagamento">Pagamentos</div>
+          <div>
+            <div class="linha-pagamento">
+              <div>Prestação Mensal</div>
+              <div id="prestacao"></div>
+            </div>
+            <div class="linha-pagamento">
+              <div>Pag Total</div>
+              <div id="pagtotal"></div>
+            </div>
+            <div class="linha-pagamento">
+              <div>Total Juros</div>
+              <div id="totaljuros"></div>
+            </div>
+          </div> 
+          
+        </div>
+      </div> 
+      <div class="graph"> direita </div>
+    </div>
+  </body>
+</html>
+
