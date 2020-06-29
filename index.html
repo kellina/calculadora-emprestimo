@@ -1,48 +1,78 @@
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="estilo.css" >
-    <script src="calculoEmprestimo.js"></script>
+<!DOCTYPE html>
 
-    <title>
-      Calculadora de emprestimos
-    </title>
-  </head>
-  <body>
-    <div class="conteiner">
-      <div class="formulario">
-        <form name="dados">
-          <div class="titulo-form"> Informe os dados do emprestimo:</div>
-          <label for="emprestimo">Total do emprestimo:</label>
-          <input type="number" id="emprestimo" name="emprestimo">
-          <label for="juros"> Juros Anuais (%):</label>
-          <input type="number" id="juros" name="juros">
-          <label for="periodo"> Periodo (anos):</label>
-          <input type="number" id="periodo" name="periodo">
-          <button onclick="calcular()" type="button">Calcular</button>
-        </form>
-        <div class="result"> 
-          <div class="titulo-pagamento">Pagamentos</div>
-          <div>
-            <div class="linha-pagamento">
-              <div>Prestação Mensal</div>
-              <div id="prestacao"></div>
-            </div>
-            <div class="linha-pagamento">
-              <div>Pag Total</div>
-              <div id="pagtotal"></div>
-            </div>
-            <div class="linha-pagamento">
-              <div>Total Juros</div>
-              <div id="totaljuros"></div>
-            </div>
-          </div> 
-          
+<html lang="pt-BR">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="estilo.css">
+  <script src="calculoEmprestimo.js"></script>
+  <link rel="stylesheet" type="text/css" href="semantic-ui/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="semantic-ui/semantic.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>
+    Calculadora de empréstimos
+  </title>
+</head>
+
+<body>
+  <div class="ui container">
+    <form class="ui form" name="dados">
+      <h1 class="ui header"> Informe os dados do empréstimo:</h1>
+      <div class="field">
+        <label for="emprestimo">Total do empréstimo:</label>
+        <div class="ui right labeled input">
+          <label for="emprestimo" class="ui label">R$</label>
+          <input type="number" id="emprestimo" name="emprestimo" placeholder="Informe o valor">
+          <div class="ui basic label">,00</div>
         </div>
-        <div>
-          <a href="https://github.com/kellina/calculadora-emprestimo">Acesso ao repositório</a>
+      </div>
+      <div class="field">
+        <label for="juros"> Juros Anuais:</label>
+        <div class="ui right labeled input">
+          <input type="number" id="juros" name="juros" placeholder="Informe o juros anuais">
+          <div class="ui basic label">%</div>
         </div>
-      </div> 
-    </div>
-  </body>
+      </div>
+      <div class="field">
+        <label for="periodo"> Período:</label>
+        <div class="ui right labeled input">
+          <input type="number" id="periodo" name="periodo" placeholder="Informe o período">
+          <div class="ui basic label">anos</div>
+        </div>
+      </div>
+      <button class="ui button" onclick="calcular()" type="button">Calcular</button>
+    </form>
+    <div class="ui section divider"></div>
+    
+    <h1 class="ui header">Pagamentos</h1>
+    <table class="ui definition table">
+      <tbody>
+        <tr>
+          <td>Prestação mensal</td>
+          <td id="prestacao">-</td>
+        </tr>
+        <tr>
+          <td>Pagamento total</td>
+          <td id="pagtotal">-</td>
+        </tr>
+        <tr>
+          <td>Total Juros</td>
+          <td id="totaljuros">-</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  
+  <div class="ui right aligned basic segment container">
+    <a class="ui label" href="https://github.com/kellina/calculadora-emprestimo">
+      <i class="large github icon"></i>
+      repositório
+    </a>
+  </div>
+</body>
+
 </html>
-
